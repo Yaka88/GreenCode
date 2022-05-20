@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GreenCode.MainPage">
+    <ScrollView>
+        <Grid>
+            <Image Aspect="AspectFill" Source="IMG_Back" />
+            <StackLayout Margin ="20,78,20,20" Spacing="2">
+                <Label x:Name="lblDate" Text="" FontSize="35" TextColor="MediumSeaGreen" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label x:Name="lblTime" Text="" FontSize="50" TextColor="MediumSeaGreen" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Margin ="30,188,30,30" Spacing="0">
+                <Slider x:Name="sliderSize" Value="1" Minimum="0.7" Maximum="1.3" ValueChanged="OnSliderValueChanged" DragStarted="OnSliderFocused" DragCompleted ="OnSliderUnfocused"></Slider>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span x:Name="lblName" Text="叶*海" FontSize="16" TextColor="Black" FontAttributes="Bold"/>
+                            <Span x:Name="lblShow" Text="   显示" FontSize="14" TextColor="DodgerBlue" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label x:Name="lblPlace" Text="" FontSize="15" TextColor="Black"  FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Entry x:Name="txtPlace" Placeholder="Enter text" Focused="OnEntryFocused" Unfocused="OnEntryCompleted"/>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
